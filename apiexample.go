@@ -16,16 +16,6 @@ type Item struct {
     Name string
 }
 
-func (i Item) String() (s string) {
-        b, err := json.Marshal(i)
-        if err != nil {
-                s = ""
-                return
-        }
-        s = string(b)
-        return
-}
-
 func (r Response) String() (s string) {
         b, err := json.Marshal(r)
         if err != nil {
