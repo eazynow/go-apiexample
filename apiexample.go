@@ -14,12 +14,6 @@ import (
 // Response is an open map to return key value pairs back to the user
 type Response map[string]interface{}
 
-// Item is a sample type that may be requested
-type Item struct {
-	Id   string
-	Name string
-}
-
 // String representation of the response map
 func (r Response) String() (s string) {
 	b, err := json.Marshal(r)
@@ -29,6 +23,12 @@ func (r Response) String() (s string) {
 	}
 	s = string(b)
 	return
+}
+
+// Item is a sample type that may be requested
+type Item struct {
+	Id   string
+	Name string
 }
 
 func main() {
